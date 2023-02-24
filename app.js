@@ -30,6 +30,7 @@ app.use("/api/v1",feedbackRoute);
 app.use("/api/v1",posterRoute);
 app.use("/api/v1",posterRoute);
 app.use("/api/v1",testimonyRoute);
+app.use("/",feedbackRoute);
 
 
 module.exports = app;
