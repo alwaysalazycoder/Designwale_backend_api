@@ -4,10 +4,10 @@ const adminMail = "designwale.official@gmail.com";
 
 exports.postFeedbacks = async (req, res, next) => {
 
-    const { name, email, whatsapp_contact, description, feedback } = req.body;
+    const { name, email, whatsapp_contact, description} = req.body;
 
     const userFeedback = await Feedback.create({
-        name, email, description, whatsapp_contact, feedback
+        name, email, description, whatsapp_contact
     });
 
     if (!userFeedback) {
@@ -19,7 +19,6 @@ exports.postFeedbacks = async (req, res, next) => {
     Email : ${email} \n\n
     Whatsapp contact number : ${whatsapp_contact} \n\n
     description : ${description} \n\n
-    feedback : ${feedback} \n\n
                     
     `
 

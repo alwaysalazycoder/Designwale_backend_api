@@ -18,9 +18,6 @@ const connectSchema = new mongoose.Schema({
     },
     description: {
         type: String,
-    },
-    feedback: {
-        type: String
     }
 })
 

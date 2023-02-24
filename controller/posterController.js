@@ -43,3 +43,21 @@ exports.postPoster = async (req, res, next) => {
         poster,
     })
 }
+
+exports.getAllPoster = async(req,res,next)=> {
+    const posters = await Poster.find({});
+
+    if(!posters){
+        res.status(400).json({
+            success : false,
+            message : "Cannot get posters"
+        })
+    }
+
+    res.status(200).json({
+        success : true,
+        message : "Posters fetched successfully",
+        posters
+    })
+
+}
