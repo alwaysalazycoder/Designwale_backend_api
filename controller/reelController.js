@@ -9,12 +9,15 @@ exports.postReel = async(req,res,next)=>{
     let myCloud;
 
     try{
-        myCloud = await cloudinary.v2.uploader.upload(req.body.reelVideo,{
+        myCloud = await cloudinary.v2.uploader.upload_large(req.body.reelVideo,{
             chunk_size: 6000000,
             folder : "DesignwaleReels",
-            resource_type:"auto",
+            resource_type: "video",
+            format: "mp4",
 
-        })
+
+
+        }).end(arrayBuffer);
     }
     catch(error){
         console.log("Error in uploading reels:: ",Erro);
