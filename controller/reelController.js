@@ -11,7 +11,7 @@ exports.postReel = async(req,res,next)=>{
     try{
         myCloud = await cloudinary.v2.uploader.upload(req.body.reelVideo,{
             chunk_size: 6000000,
-            folder : "Designwale-reels",
+            folder : "DesignwaleReels",
             resource_type:"auto",
 
         })
