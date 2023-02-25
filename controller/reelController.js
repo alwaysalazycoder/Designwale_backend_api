@@ -10,17 +10,9 @@ exports.postReel = async(req,res,next)=>{
 
     try{
         myCloud = await cloudinary.v2.uploader.upload_large(req.body.reelVideo,{
-            chunk_size: 6000000,
             folder : "DesignwaleReels",
             resource_type: "video",
             format: "mp4",
-            eager: [
-                { width: 300, height: 300, crop: "pad", audio_codec: "none" }, 
-                { width: 160, height: 100, crop: "crop", gravity: "south", audio_codec: "none" } ],                                   
-              eager_async: true,
-
-
-
         }).end(arrayBuffer);
     }
     catch(error){
