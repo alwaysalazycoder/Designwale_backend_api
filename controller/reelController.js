@@ -4,7 +4,7 @@ import cloudinary from "cloudinary";
 
 exports.postReel = async(req,res,next)=>{
 
-    const {reel_title} = req.body;
+    const {reelTitle} = req.body;
 
     let myCloud;
 
@@ -34,7 +34,7 @@ exports.postReel = async(req,res,next)=>{
         })
     }
     const reel = await Reel.create({
-        reel_title,
+        reel_title :reelTitle,
         public_id:myCloud.public_id,
         public_url:myCloud.secure_url
     });
