@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-let mongourl = process.env.MONGO_URI;   //"mongodb://localhost:27017/DesignWale"
+let mongourl = process.env.MONGO_URI;
 
 // 8CMSLeZLwOzV0BNF
 

@@ -1,7 +1,6 @@
 
 const Reel = require("../models/reelModel");
-import cloudinary from "cloudinary";
-
+const cloudinary = require('cloudinary');
 exports.postReel = async(req,res,next)=>{
 
     const {reelTitle} = req.body;
@@ -9,7 +8,7 @@ exports.postReel = async(req,res,next)=>{
     let myCloud;
 
     try{
-        myCloud = await cloudinary.v2.uploader.upload(req.body.reelVideo,{
+        myCloud = await cloudinary.v2.uploader.upload_large(req.body.reelVideo,{
             folder : "DesignwaleReels",
             resource_type: "video",
             format: "mp4",
