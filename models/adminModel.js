@@ -26,7 +26,7 @@ const adminSchema = new mongoose.Schema({
 
 // jwt token
 adminSchema.methods.getJWTToken = function () { // here we are making the methods
-    return jwt.sign({ id: this._id },process.env.JWT_SECRET, { // here we are making the token using the id as payload
+    return jwt.sign({ id: this._id },process.env.JWT_SECRET || "MERISECRETKEYHAIYEHORKYAHAI", { // here we are making the token using the id as payload
         expiresIn: "28d",
     })
 }

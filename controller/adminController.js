@@ -22,6 +22,7 @@ exports.registerAdmin = async (req, res, next) => {
     sendToken(admin,token,200, res);
 }
 
+
 exports.loginAdmin = async(req,res,next)=>{
 
     const {email,password} = req.body;
