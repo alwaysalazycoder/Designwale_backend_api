@@ -62,3 +62,17 @@ exports.loginAdmin = async(req,res,next)=>{
     sendToken(users,token,200,res);
 
 }
+
+exports.logOut = catchAsyncError(async (req, res, next) => {
+
+    res.cookie('token', null, {
+        expiresIn: new Date(Date.now()),
+        httpOnly: true,
+    })
+
+    res.status(200).json({
+        success: true,
+        message: "logged out successfully"
+    })
+})
+
