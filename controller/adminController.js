@@ -63,7 +63,7 @@ exports.loginAdmin = async(req,res,next)=>{
 
 }
 
-exports.logOut = catchAsyncError(async (req, res, next) => {
+exports.logOut = async (req, res, next) => {
 
     res.cookie('token', null, {
         expiresIn: new Date(Date.now()),
@@ -74,5 +74,5 @@ exports.logOut = catchAsyncError(async (req, res, next) => {
         success: true,
         message: "logged out successfully"
     })
-})
+}
 
