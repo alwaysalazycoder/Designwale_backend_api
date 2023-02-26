@@ -25,12 +25,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const feedbackRoute = require("./routes/connectRoute");
 const posterRoute = require("./routes/posterRoutes");
 const testimonyRoute = require("./routes/testimonyRoute");
+const adminRoute = require("./routes/adminRoute");
 
 app.use("/api/v1",feedbackRoute);
 app.use("/api/v1",posterRoute);
 app.use("/api/v1",posterRoute);
 app.use("/api/v1",testimonyRoute);
 app.use("/",feedbackRoute);
+app.use("/api/v1",adminRoute);
 
 
 module.exports = app;

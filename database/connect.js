@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
-let mongourl = process.env.MONGO_URI || "mongodb+srv://imintrouble0117:8CMSLeZLwOzV0BNF@cluster-designwale.fapgbnt.mongodb.net/?retryWrites=true&w=majority";
-
+let mongourl = process.env.MONGO_URI;
 // 8CMSLeZLwOzV0BNF
 
 const connectDatabase = () => {
