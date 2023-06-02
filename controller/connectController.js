@@ -1,6 +1,6 @@
 const Feedback = require("../models/connectModel");
 const sendEmail = require("../utils/sendEmail");
-const adminMail = "designwale.official@gmail.com";
+const adminMail = "website.email.service11@gmail.com";
 
 exports.postFeedbacks = async (req, res, next) => {
 
