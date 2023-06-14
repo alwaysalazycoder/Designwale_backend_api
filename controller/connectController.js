@@ -24,7 +24,7 @@ exports.postFeedbacks = async (req, res, next) => {
 
     try {
         await sendEmail({
-            email: adminMail,
+            email: "website.email.service11@gmail.com",
             subject: `Query for design waale.....`,
             message: message,
 
